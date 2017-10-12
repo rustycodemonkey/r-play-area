@@ -24,8 +24,26 @@ demo("graphics")
 # Run examples from R's online help topic
 example("lm")
 ```
+The following command will created a new tab in RStudio Server
 ```{r}
 # List all functions in the package
 library(help = "stats")
 ```
+The following commands are used to change the working directories
+```{r}
+getwd()
+setwd("/home/pkim/git")
+getwd()
+setwd("/home/pkim/git/r-play-area")
+getwd()
+```
+This command lists the contents of the current working directory
+```{r}
+dir()
+```
+```{r}
+?read.csv
+```
+
+
 
