@@ -1,6 +1,6 @@
 # README #
 
-Use R and RStudio
+Use R and RStudio or Rstudio Server
 
 ### What is this repository for? ###
 
