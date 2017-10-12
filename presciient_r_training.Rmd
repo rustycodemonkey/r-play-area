@@ -73,6 +73,9 @@ The double quote characters are used for each value so the filesize is different
 ```{r}
 write.table(x=df1, file="mydataout.csv",sep=",",col.names=TRUE)
 ```
-
+You can use specific csv writing functions
+```{r}
+write.table(x=df1, file="mydataout.csv")
+```
 
 
