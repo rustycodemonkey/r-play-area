@@ -42,7 +42,36 @@ This command lists the contents of the current working directory
 dir()
 ```
 ```{r}
-?read.csv
+df1 <- read.table(file="HR_comma_sep.csv", sep=",", header=TRUE)
+df1
+```
+There are other variants of this function with differente defaults
+```{r}
+df1 <- read.csv(file="HR_comma_sep.csv")
+df1
+```
+Read a file from a website usg 
+```{r}
+df2 <- read.table(file="http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data",sep=",",header=FALSE)
+df2
+# Please note the V# columns if you don't specify row.names
+```
+Read from keyboard numeric values  
+Type from console
+```{r}
+numvals <- scan(file="",what="numeric")
+numvals
+```
+Read from keyboard characters
+Type from console
+```{r}
+charvals <- scan(file="",what="character")
+charvals
+```
+Write to a CSV file  
+The double quote characters are used for each value so the filesize is different from the original file
+```{r}
+write.table(x=df1, file="mydataout.csv",sep=",",col.names=TRUE)
 ```
 
 
