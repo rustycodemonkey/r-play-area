@@ -158,8 +158,16 @@ myvec[-(1:10)]
 # a vector can be indexed by another vector
 myvec[c(1,12,19,21,38,82,91)]
 ```
+Vector Indexing by Name
+```{r}
+newvec <- 1:5
+names(newvec) <- c("one","two","three","four","five")
+newvec
 
-
-
-
+newvec["one"]
+newvec[c("one","three")]
+# The following does NOT work
+#newvec[c(one,three)]
+#newvec[-c("one","three")]
+```
 
