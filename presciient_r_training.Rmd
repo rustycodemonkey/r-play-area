@@ -29,6 +29,9 @@ The following command will created a new tab in RStudio Server
 # List all functions in the package
 library(help = "stats")
 ```
+
+# Basic Input and Output
+
 The following commands are used to change the working directories
 ```{r}
 getwd()
@@ -77,5 +80,86 @@ You can use specific csv writing functions
 ```{r}
 write.table(x=df1, file="mydataout.csv")
 ```
-Test
+# Vectors
+
+```{r}
+myvec.int <- c(1,2,3,4,5)
+#myvec.int <- c(1,7:9)
+myvec.int
+myvec.char <- c("apple","dell","microsoft","ibm")
+myvec.char
+myvec.logical <- c(TRUE,FALSE,TRUE,FALSE)
+myvec.logical
+```
+The mode function displays the storage mode of the object
+```{r}
+mode(myvec.logical)
+```
+The seq function and ":" operator to create a vector
+```{r}
+y <- 1:4
+y
+pi:10
+10:pi
+# "by" is to specify the increments
+seq(from=2, to=8, by=2)
+# "length" is to specify the resulting vector
+seq(from=0, to=1, length=11)
+```
+The rep (repeat) function and replicates the elements of a vector (and list)
+```{r}
+# "times" specifies the number of repetitions
+rep(x=c(1,2,3,4), times=2)
+# "each" specifies the number of repetitions for each element of the vector
+rep(x=c(1,2,3,4), each=2)
+rep(x=1:4,each=4)
+rep(x=1:4,times=4)
+rep(x=1:4,times=1:4)
+```
+Vector Arithmetics
+```{r}
+c(1,2,3,4)/2
+c(1,2,3,4)/c(4,3,2,1)
+# the smaller vector is recycled so the result is 2/2,4/3,6/2,8/3
+c(2,4,6,8)/c(2,3)
+```
+Basic Vector Functions
+```{r}
+vector.one <- 1:10
+vector.one
+length(vector.one)
+sum(vector.one)
+mean(vector.one)
+median(vector.one)
+```
+Vector Manipulation
+```{r}
+myvec <- 2001:2100
+# Index in R starts in 1 and NOT from 0
+myvec[1]
+length(myvec)
+myvec[length(myvec)]
+
+# You can name each element of a vector
+newvec <- 1:5
+names(newvec) <- c("one","two","three","four","five")
+newvec
+```
+Vector Indexing
+```{r}
+# first 10 elements
+myvec[1:10]
+# all but first element
+myvec[-1]
+# all but second element
+myvec[-2]
+# all but first 10 elements
+myvec[-(1:10)]
+# a vector can be indexed by another vector
+myvec[c(1,12,19,21,38,82,91)]
+```
+
+
+
+
 
