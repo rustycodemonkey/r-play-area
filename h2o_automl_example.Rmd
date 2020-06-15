@@ -85,5 +85,6 @@ print(lb, n = nrow(lb))  # Print all rows instead of default (6 rows)
 
 
 ```{r}
+aml
 ```
 
